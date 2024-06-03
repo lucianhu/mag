@@ -1,10 +1,10 @@
 process SPADES {
     tag "$meta.id"
 
-    conda "bioconda::spades=3.15.3"
+    conda "bioconda::spades=3.15.5"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/spades:3.15.3--h95f258a_0' :
-        'biocontainers/spades:3.15.3--h95f258a_0' }"
+        'https://depot.galaxyproject.org/singularity/spades:3.15.5--h5fb382e_2' :
+        'biocontainers/spades:3.15.5--h5fb382e_2' }"
 
     input:
     tuple val(meta), path(reads)
