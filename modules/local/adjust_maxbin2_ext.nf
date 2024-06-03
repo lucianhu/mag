@@ -3,10 +3,10 @@ process ADJUST_MAXBIN2_EXT {
     label 'process_low'
 
     // Using container from multiqc since it'll be included anyway
-    conda "bioconda::multiqc=1.12"
+    conda "bioconda::multiqc=1.22.2"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/multiqc:1.12--pyhdfd78af_0' :
-        'biocontainers/multiqc:1.12--pyhdfd78af_0' }"
+        'https://depot.galaxyproject.org/singularity/multiqc:1.22.2--pyhdfd78af_0' :
+        'biocontainers/multiqc:1.22.2--pyhdfd78af_0' }"
 
     input:
     tuple val(meta), path(bins)
