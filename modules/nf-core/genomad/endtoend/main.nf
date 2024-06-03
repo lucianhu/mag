@@ -4,8 +4,8 @@ process GENOMAD_ENDTOEND {
 
     conda "bioconda::genomad=1.5.2"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/genomad:1.5.2--pyhdfd78af_0':
-        'biocontainers/genomad:1.5.2--pyhdfd78af_0' }"
+        'https://depot.galaxyproject.org/singularity/genomad:1.8.0--pyhdfd78af_1':
+        'biocontainers/genomad:1.8.0--pyhdfd78af_1' }"
 
     input:
     tuple val(meta) , path(fasta)
