@@ -3,8 +3,8 @@ process MEGAHIT {
 
     conda "bioconda::megahit=1.2.9"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/megahit:1.2.9--h2e03b76_1' :
-        'biocontainers/megahit:1.2.9--h2e03b76_1' }"
+        'https://depot.galaxyproject.org/singularity/megahit:1.2.9--h43eeafb_5' :
+        'biocontainers/megahit:1.2.9--h43eeafb_5' }"
 
     input:
     tuple val(meta), path(reads1), path(reads2)
