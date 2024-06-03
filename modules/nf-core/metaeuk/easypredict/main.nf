@@ -4,8 +4,8 @@ process METAEUK_EASYPREDICT {
 
     conda "bioconda::metaeuk=6.a5d39d9"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/metaeuk:6.a5d39d9--pl5321hf1761c0_2':
-        'biocontainers/metaeuk:6.a5d39d9--pl5321hf1761c0_2' }"
+        'https://depot.galaxyproject.org/singularity/metaeuk:7.bba0d80--pl5321h6a68c12_0':
+        'biocontainers/metaeuk:7.bba0d80--pl5321h6a68c12_0' }"
 
     input:
     tuple val(meta), path(fasta)
