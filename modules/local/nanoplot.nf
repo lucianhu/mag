@@ -1,10 +1,10 @@
 process NANOPLOT {
     tag "$meta.id"
 
-    conda "bioconda::nanoplot=1.26.3"
+    conda "bioconda::nanoplot=1.42.0"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/nanoplot:1.26.3--py_0' :
-        'biocontainers/nanoplot:1.26.3--py_0' }"
+        'https://depot.galaxyproject.org/singularity/nanoplot:1.42.0--pyhdfd78af_0' :
+        'biocontainers/nanoplot:1.42.0--pyhdfd78af_0' }"
 
     input:
     tuple val(meta), path(reads)
