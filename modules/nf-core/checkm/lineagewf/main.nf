@@ -2,7 +2,7 @@ process CHECKM_LINEAGEWF {
     tag "$meta.id"
     label 'process_medium'
 
-    conda "bioconda::checkm-genome=1.2.1"
+    conda "bioconda::checkm-genome=1.2.2"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/checkm-genome:1.2.2--pyhdfd78af_1' :
         'biocontainers/checkm-genome:1.2.2--pyhdfd78af_1' }"
