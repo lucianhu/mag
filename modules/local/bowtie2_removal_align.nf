@@ -4,10 +4,10 @@
 process BOWTIE2_REMOVAL_ALIGN {
     tag "$meta.id"
 
-    conda "bioconda::bowtie2=2.4.2"
+    conda "bioconda::bowtie2=2.5.4"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/bowtie2:2.4.2--py38h1c8e9b9_1' :
-        'biocontainers/bowtie2:2.4.2--py38h1c8e9b9_1' }"
+        'https://depot.galaxyproject.org/singularity/bowtie2:2.5.4--he20e202_0' :
+        'biocontainers/bowtie2:2.5.4--he20e202_0' }"
 
     input:
     tuple val(meta), path(reads)
