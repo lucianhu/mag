@@ -1,10 +1,10 @@
 process NANOLYSE {
     tag "$meta.id"
 
-    conda "bioconda::nanolyse=1.1.0"
+    conda "bioconda::nanolyse=1.2.1"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/nanolyse:1.1.0--py36_1' :
-        'biocontainers/nanolyse:1.1.0--py36_1' }"
+        'https://depot.galaxyproject.org/singularity/nanolyse:1.2.1--pyhdfd78af_0' :
+        'biocontainers/nanolyse:1.2.1--pyhdfd78af_0' }"
 
     input:
     tuple val(meta), path(reads)
