@@ -4,7 +4,7 @@ process FASTQC {
 
     conda "${moduleDir}/environment.yml"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/fastqc:0.12.1--hdfd78af_0' :
+        'https://depot.galaxyproject.org/singularity/fastqc:0.11.9--hdfd78af_1' :
         'biocontainers/fastqc:0.12.1--hdfd78af_0' }"
 
     input:
